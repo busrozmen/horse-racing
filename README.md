@@ -2,7 +2,7 @@
 
 A dynamic horse racing simulation game built with Vue 3, Vuex and TypeScript.
 
-(![Horse Racing Game Screenshot](image.png))
+![Horse Racing Game Screenshot](image.png)
 
 ## Features
 
