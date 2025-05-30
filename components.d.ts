@@ -19,7 +19,6 @@ declare module 'vue' {
     IconMdiTrophy: typeof import('~icons/mdi/trophy')['default']
     InfoBox: typeof import('./src/components/common/InfoBox.vue')['default']
     RaceProgramAndResults: typeof import('./src/components/race/RaceProgramAndResults.vue')['default']
-    RaceResults: typeof import('./src/components/race/RaceResults.vue')['default']
     RaceTrack: typeof import('./src/components/race/RaceTrack.vue')['default']
     RoundItem: typeof import('./src/components/race/RoundItem.vue')['default']
     RoundList: typeof import('./src/components/race/RoundList.vue')['default']

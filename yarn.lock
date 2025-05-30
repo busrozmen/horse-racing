@@ -430,20 +430,6 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/ph@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@iconify-json/ph/-/ph-1.2.2.tgz#eac734e80f4639df6ade990690a825540b4259c4"
-  integrity sha512-PgkEZNtqa8hBGjHXQa4pMwZa93hmfu8FUSjs/nv4oUU6yLsgv+gh9nu28Kqi8Fz9CCVu4hj1MZs9/60J57IzFw==
-  dependencies:
-    "@iconify/types" "*"
-
-"@iconify-json/tabler@^1.2.18":
-  version "1.2.18"
-  resolved "https://registry.yarnpkg.com/@iconify-json/tabler/-/tabler-1.2.18.tgz#389512973140e89c3bbde327f8483e3c11bf969c"
-  integrity sha512-W+8qiJhJpb4dmBw3P7JSM9QhGsFG8GIS3BJWAmrJ/92rzK6NPGUOPfGmswoO+/MuPzQV96ColY9lcUktUKv0pg==
-  dependencies:
-    "@iconify/types" "*"
-
 "@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"

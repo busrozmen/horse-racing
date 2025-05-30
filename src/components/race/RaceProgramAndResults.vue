@@ -39,7 +39,7 @@ watch(() => allRounds.value.find(r => r.isActive), async (activeRound) => {
 </script>
 
 <template>
-  <div class="race-results__container">
+  <div class="race-program-results">
     <RoundList
       title="Program"
       icon="note"
@@ -59,5 +59,5 @@ watch(() => allRounds.value.find(r => r.isActive), async (activeRound) => {
 </template>
 
 <style scoped>
-@import '@/assets/styles/raceResults.scss';
+@import '@/assets/styles/raceProgramAndResults.scss';
 </style>

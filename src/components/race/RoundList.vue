@@ -45,7 +45,7 @@ const getHorseTimesForRound = (roundIndex: number) => {
     <div class="round-list__content">
       <div class="round-list__section">
         <div v-if="!hasProgram" class="round-list__empty-section">
-          <div class="round-list__empty-section--icon">
+          <div class="round-list__empty-section-icon">
             <IconMdiNoteTextOutline v-if="title === 'Program'" />
             <IconMdiFlagCheckered v-else />
           </div>

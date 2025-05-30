@@ -64,16 +64,16 @@ const displayResults = computed(() => {
 </script>
 
 <template>
-  <div class="race-results__section-round" :class="{
+  <div class="round-item" :class="{
     active: round.isActive,
     completed: round.isCompleted,
   }" :data-round="round.roundNumber">
-    <div class="race-results__section-round--header">
-      <span class="race-results__section-round--title">
+    <div class="round-item__header">
+      <span class="round-item__title">
         {{ round.roundNumber }}{{ getOrdinalSuffix(round.roundNumber) }} Lap -
         {{ round.distance }}m
       </span>
-      <span v-if="props.showStatus" class="race-results__section-round--status" :class="{
+      <span v-if="props.showStatus" class="round-item__status" :class="{
         completed: round.isCompleted,
         active: round.isActive,
         pending: !round.isActive && !round.isCompleted
@@ -84,20 +84,20 @@ const displayResults = computed(() => {
       </span>
     </div>
 
-    <TransitionGroup name="horse-list" tag="div" class="race-results__section-round--horses">
+    <TransitionGroup name="horse-list" tag="div" class="round-item__horses">
       <div v-for="result in displayResults" :key="`${result.horse.id}-${showTime ? 'result' : 'program'}`"
-        class="race-results__section-round--horse" :class="{
+        class="round-item__horse" :class="{
           winner: showTime && result.position === 1,
           second: showTime && result.position === 2,
           third: showTime && result.position === 3,
         }">
-        <span class="race-results__section-round--horse--position">
+        <span class="round-item__horse-position">
           {{ result.position }}
         </span>
-        <span class="race-results__section-round--horse--name">
+        <span class="round-item__horse-name">
           {{ result.horse.name }}
         </span>
-        <span v-if="showTime && result.time !== null && result.time !== undefined" class="race-results__section-round--horse--time">
+        <span v-if="showTime && result.time !== null && result.time !== undefined" class="round-item__horse-time">
           {{ result.time.toFixed(3) }}s
         </span>
        

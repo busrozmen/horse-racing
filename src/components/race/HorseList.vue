@@ -15,24 +15,24 @@ const isHorseRacing = (horseId: number): boolean => {
 </script>
 
 <template>
-  <div class="horse-list__container">
+  <div class="horse-list">
     <div class="horse-list__header">
       <h2>Horse List</h2>
     </div>
     <div class="horse-list__table">
-      <div class="horse-list__table--header">
+      <div class="horse-list__table-header">
         <span>Name</span>
         <span>Condition</span>
       </div>
-      <div class="horse-list__table--body">
+      <div class="horse-list__table-body">
         <div
           v-for="horse in horses"
           :key="horse.id"
-          class="horse-list__table--row"
+          class="horse-list__row"
           :class="{ racing: isHorseRacing(horse.id) }"
         >
           <div class="horse-list__item">
-            <div class="horse-list__item--icon" :style="{ color: horse.color }">  
+            <div class="horse-list__icon" :style="{ color: horse.color }">  
                  <IconMdiHorse />
             </div>
             <span>{{ horse.name }}</span>

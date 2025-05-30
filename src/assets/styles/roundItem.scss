@@ -1,136 +1,132 @@
-.race-results {
-  &__section {
-    &-round {
-      background: #f8f9fa;
-      border-radius: 8px;
-      padding: 12px;
+.round-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &.active {
+    background: #f0f8ff;
+  }
+
+  &.completed {
+    background: #dcf7dc;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: #495057;
+    font-size: 16px;
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 14px;
+
+    &.completed {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    &.active {
+      background: #d9e1e7;
+      color: #5d778b;
+    }
+
+    &.pending {
+      background: #e2e3e5;
+      color: #6c757d;
+    }
+  }
+
+  &__horses {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+  }
+
+  &__horse {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+    background: white;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &.winner {
+      background: #f5f1cf;
+
+      .round-item__horse-position {
+        background: #ffd700;
+        color: #333;
+      }
+
+    }
+
+    &.second {
+      background: #f5f5f5;
+
+      .round-item__horse-position {
+        background: #c0c0c0;
+        color: #333;
+      }
+
+    }
+
+    &.third {
+      background: #faf0e6;
+
+      .round-item__horse-position {
+        background: #cd7f32;
+        color: white;
+      }
+    }
+
+    &-position {
+      background: #006f00;
+      color: white;
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
       transition: all 0.3s ease;
-      position: relative;
+    }
 
-      &.active {
-        background: #f0f8ff;
-      }
+    &-name {
+      color: #495057;
+      font-weight: 500;
+      flex: 1;
+    }
 
-      &.completed {
-        background: #dcf7dc;
-      }
-
-      &--header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 8px;
-        padding-bottom: 8px;
-        border-bottom: 1px solid #dee2e6;
-      }
-
-      &--title {
-        font-weight: bold;
-        color: #495057;
-        font-size: 16px;
-      }
-
-      &--status {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        font-size: 14px;
-
-        &.completed {
-          background: #d4edda;
-          color: #155724;
-        }
-
-        &.active {
-          background: #d9e1e7;
-          color: #5d778b;
-        }
-
-        &.pending {
-          background: #e2e3e5;
-          color: #6c757d;
-        }
-      }
-
-      &--horses {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        position: relative;
-      }
-
-      &--horse {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 4px;
-        background: white;
-        border-radius: 4px;
-        font-size: 14px;
-        white-space: nowrap;
-        transition: all 0.3s ease;
-        position: relative;
-
-        &.winner {
-          background: #f5f1cf;
-
-          .race-results__section-round--horse--position {
-            background: #ffd700;
-            color: #333;
-          }
-
-        }
-
-        &.second {
-          background: #f5f5f5;
-
-          .race-results__section-round--horse--position {
-            background: #c0c0c0;
-            color: #333;
-          }
-
-        }
-
-        &.third {
-          background: #faf0e6;
-
-          .race-results__section-round--horse--position {
-            background: #cd7f32;
-            color: white;
-          }
-        }
-
-        &--position {
-          background: #006f00;
-          color: white;
-          width: 20px;
-          min-width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 12px;
-          font-weight: bold;
-          transition: all 0.3s ease;
-        }
-
-        &--name {
-          color: #495057;
-          font-weight: 500;
-          flex: 1;
-        }
-
-        &--time {
-          font-size: 11px;
-          margin-left: auto;
-          color: #6c757d;
-          font-weight: 600;
-        }
-      }
+    &-time {
+      font-size: 11px;
+      margin-left: auto;
+      color: #6c757d;
+      font-weight: 600;
     }
   }
 }

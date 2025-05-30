@@ -26,7 +26,7 @@ const getHorsePosition = (horseId: number): number => {
 </script>
 
 <template>
-  <div class="race-track__container">
+  <div class="race-track">
     <div class="race-track__header">
       <h2 v-if="activeRound">
         {{ activeRound.roundNumber
@@ -38,11 +38,11 @@ const getHorsePosition = (horseId: number): number => {
 
     <div v-if="hasProgram && !allRoundsCompleted" class="race-track__lanes">
       <div v-for="index in 10" :key="index" class="race-track__lane">
-        <div class="race-track__lane--number">{{ index }}</div>
-        <div class="race-track__lane--item">
+        <div class="race-track__lane-number">{{ index }}</div>
+        <div class="race-track__lane-item">
           <IconMdiHorse
             v-if="activeRound && activeRound.horses[index - 1]"
-            class="race-track__lane--horse"
+            class="race-track__horse"
             :style="{
               left: getHorsePosition(activeRound.horses[index - 1].id) + '%',
               color: activeRound.horses[index - 1].color,
@@ -60,13 +60,13 @@ const getHorsePosition = (horseId: number): number => {
       v-else-if="!hasProgram"
       title="Generate Program to Start Racing"
       description='Click "Generate Program" to create 6 rounds of exciting horse races!'
-      ><IconMdiFlagCheckered class="race-track__info-box--flag-icon"
+      ><IconMdiFlagCheckered class="race-track__info-icon--flag"
     /></InfoBox>
     <InfoBox
       v-else-if="allRoundsCompleted"
       title="All Races Completed!"
       description='Click "Generate Program" to start a new racing program!'
-      ><IconMdiTrophy class="race-track__info-box--trophy-icon"
+      ><IconMdiTrophy class="race-track__info-icon--trophy"
     /></InfoBox>
   </div>
 </template>

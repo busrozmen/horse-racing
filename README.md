@@ -1,5 +1,53 @@
-# Vue 3 + TypeScript + Vite
+# Horse Racing Game 🐎
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A dynamic horse racing simulation game built with Vue 3, Vuex and TypeScript.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+(![Horse Racing Game Screenshot](image.png))
+
+## Features
+
+- 20 unique horses with different conditions and colors
+- 6 racing rounds with varying distances (1200m to 2200m)
+- Real-time race visualization
+- Race program management
+- Race results tracking
+- Pause and resume race functionality
+
+## Tech Stack
+
+- Vue 3 with TypeScript
+- Vuex for state management
+- SCSS for styling
+- Jest for testing
+- Vite for build tooling
+- Unplugin Icons for icon management
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/busrozmen/horse-racing.git
+cd horse-racing
+```
+
+2. Install dependencies:
+```bash
+yarn install
+```
+
+3. Start development server:
+```bash
+yarn dev
+```
+
+The application will be available at `http://localhost:3000`
+
+## Testing
+
+Run unit tests:
+
+```bash
+yarn test
+```
