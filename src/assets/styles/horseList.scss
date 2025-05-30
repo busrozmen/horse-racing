@@ -1,0 +1,85 @@
+.horse-list {
+  &__container {
+    height: 100%;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #f1f1f1;
+  }
+
+  &__header {
+    background: #f1f1f1;
+    color: #171717;
+    padding: 8px 16px;
+    text-align: center;
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  &__table {
+    height: calc(100% - 56px);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    &--header {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      padding: 8px 16px;
+      font-weight: bold;
+      color: #171717;
+      font-size: 14px;
+      border-bottom: 2px solid #ecf0f1;
+    }
+
+    &--body {
+      flex: 1;
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+
+    &--row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      padding: 8px 12px;
+      border-bottom: 1px solid #e9ecef;
+      text-align: center;
+      font-size: 14px;
+      align-items: center;
+      white-space: nowrap;
+
+      &:hover {
+        background: #f8f9fa;
+      }
+
+      &.racing {
+        background: #f0f8ff;
+        animation: pulse 2s infinite;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &--icon {
+      font-size: 16px;
+      height: 21px;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}

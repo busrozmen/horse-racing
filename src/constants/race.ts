@@ -1,0 +1,48 @@
+
+export const HORSE_COLORS = [
+  '#FF0000',
+  '#5DCF5D',
+  '#0000FF',
+  '#FFFF00',
+  '#00FFFF',
+  '#FF00FF',
+  '#000000',
+  '#87CEEB',
+  '#FFA500',
+  '#800080',
+  '#A52A2A',
+  '#808080',
+  '#000080',
+  '#808000',
+  '#008080',
+  '#800000',
+  '#00FF00',
+  '#C0C0C0',
+  '#FFD700',
+  '#FFC0CB',
+];
+
+export const ROUND_DISTANCES = [1200, 1400, 1600, 1800, 2000, 2200];
+
+export const HORSE_NAMES = [
+  'Thunder Bolt',
+  'Lightning Strike',
+  'Storm Chaser',
+  'Wind Runner',
+  'Fire Storm',
+  'Golden Arrow',
+  'Silver Bullet',
+  'Black Diamond',
+  'Red Comet',
+  'Blue Lightning',
+  'Midnight Express',
+  'Dawn Breaker',
+  'Star Gazer',
+  'Moon Walker',
+  'Sun Dancer',
+  'Ocean Wave',
+  'Mountain Peak',
+  'Desert Wind',
+  'Forest Runner',
+  'Valley King',
+];

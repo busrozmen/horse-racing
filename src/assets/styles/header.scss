@@ -1,0 +1,38 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  color: #171717;
+  padding: 8px;
+  margin-bottom: 12px;
+
+  h1 {
+    font-size: 24px;
+  }
+
+  &__controls {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.button {
+  &--generate {
+    background: #d1332b;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: #b34943;
+    }
+  }
+
+  &--start {
+    background: green;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: #005e00
+    }
+  }
+}

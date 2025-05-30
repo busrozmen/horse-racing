@@ -1,0 +1,107 @@
+.race-track {
+  &__container {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &__header {
+    background: #f1f1f1;
+    color: #171717;
+    padding: 8px 16px;
+    text-align: center;
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  &__lanes {
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    background: green;
+    position: relative;
+  }
+
+  &__lane {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+    overflow: hidden;
+
+    &--number {
+      width: 60px;
+      height: 20px;
+      background: brown;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      transform: rotate(270deg);
+    }
+
+    &--item {
+      flex: 1;
+      position: relative;
+      height: 60px;
+      border-bottom: 2px dashed #fff;
+    }
+
+    &--horse {
+      position: absolute;
+      bottom: 10px;
+      font-size: 36px;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+  }
+
+  &__finish {
+    &-line {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #000 0px,
+        #000 10px,
+        #fff 10px,
+        #fff 20px
+      );
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-text {
+      writing-mode: vertical-rl;
+      background: #fff;
+      padding: 10px 5px;
+      font-weight: bold;
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__info-box {
+    &--flag-icon {
+      font-size: 48px;
+    }
+    &--trophy-icon {
+      font-size: 38px;
+      color: green;
+    }
+  }
+}

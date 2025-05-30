@@ -1,0 +1,13 @@
+.info-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background: #f1f1f1;
+  }
+}
